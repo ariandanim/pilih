@@ -5,7 +5,7 @@ defmodule Pilih.MixProject do
     [
       app: :pilih,
       version: "0.1.0",
-      elixir: "~> 1.14",
+      elixir: "~> 1.18.2",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
@@ -32,18 +32,18 @@ defmodule Pilih.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.7.14"},
-      {:phoenix_ecto, "~> 4.5"},
-      {:ecto_sql, "~> 3.10"},
+      {:phoenix, "~> 1.7.20"},
+      {:phoenix_ecto, "~> 4.6.3"},
+      {:ecto_sql, "~> 3.12"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 4.1"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       # TODO bump on release to {:phoenix_live_view, "~> 1.0.0"},
-      {:phoenix_live_view, "~> 1.0.0-rc.1", override: true},
+      {:phoenix_live_view, "~> 1.0.5", override: true},
       {:floki, ">= 0.30.0", only: :test},
       {:phoenix_live_dashboard, "~> 0.8.3"},
-      {:esbuild, "~> 0.8", runtime: Mix.env() == :dev},
-      {:tailwind, "~> 0.2", runtime: Mix.env() == :dev},
+      {:esbuild, "~> 0.9", runtime: Mix.env() == :dev},
+      {:tailwind, "~> 0.3.1", runtime: Mix.env() == :dev},
       {:heroicons,
        github: "tailwindlabs/heroicons",
        tag: "v2.1.1",
@@ -51,14 +51,14 @@ defmodule Pilih.MixProject do
        app: false,
        compile: false,
        depth: 1},
-      {:swoosh, "~> 1.5"},
-      {:finch, "~> 0.13"},
-      {:telemetry_metrics, "~> 1.0"},
-      {:telemetry_poller, "~> 1.0"},
+      {:swoosh, "~> 1.17.10"},
+      {:finch, "~> 0.19"},
+      {:telemetry_metrics, "~> 1.1"},
+      {:telemetry_poller, "~> 1.1"},
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
-      {:dns_cluster, "~> 0.1.1"},
-      {:bandit, "~> 1.5"}
+      {:dns_cluster, "~> 0.1.3"},
+      {:bandit, "~> 1.6"}
     ]
   end
 
